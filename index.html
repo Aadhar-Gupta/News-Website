@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <title>News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <header>
+      <div class="banner">
+        <h3>News</h3>
+      </div>
+    </header>
+    <button id="home" >home</button>
+    <div class="text">
+      <label for="search">Search your keyword</label>
+      <input type="text" name="" id="search">
+      <button id="save">Search</button>
+
+    </div>
+    <div class="container2">
+      <div class="side">
+        <p>type </p>
+        <ul class="xop">
+          <li><input type="checkbox" name="" value="news" id="ne">
+            <label for="ne">news</label>
+          </li>
+          <li> <input type="checkbox" name="" value="news" id="ev">
+            <label for="ev">events</label>
+          </li>
+        </ul>
+        <p>filters</p>
+      </div>
+      <div id="container"></div>
+
+    </div>
+    <div class="page">
+      <button id="next">next</button>
+      <button id="0" class="reset">0</button>
+      <button id="1" class="pages">1</button>
+      <button id="2" class="pages">2</button>
+      <button id="3" class="pages">3</button>
+      <button id="4" class="pages">4</button>
+      <button id="5" class="pages">5</button>
+      <button id="6" class="pages">6</button>
+      <button id="7" class="pages">7</button>
+      <button id="8" class="pages">8</button>
+      <button id="9" class="pages">9</button>
+      <button id="pre">previous</button>
+    </div>
+
+  </div>
+</body>
+<script id="products-template" type="text/x-handlebars-template">
+
+  {{#data}}
+  <div class="card">
+    <div id="loading-animation" class="loader">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+      <div class="bar5"></div>
+      <div class="bar6"></div>
+      <div class="bar7"></div>
+      <div class="bar8"></div>
+      <div class="bar9"></div>
+      <div class="bar10"></div>
+      <div class="bar11"></div>
+      <div class="bar12"></div>
+  </div>
+    <img class="image" src="{{{urlToImage}}}"  loading="lazy" alt="Article Image"  >
+    <h5 id="auth">{{authorName author source.name}}</h5>
+    <h3 id="title">{{title}}</h3>
+    <p id="desc">{{description}}</p>
+    <a target="_blank" href="{{{url}}}"><button id="btn">Click to view full article</button></a>
+  </div>
+  {{/data}}
+  
+</script>
+<script src="app.js"></script>
+
+</html>
